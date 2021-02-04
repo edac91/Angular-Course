@@ -8,13 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   displayDetails = false;
-  counter = 0;
   arrButtonClickedCounter = [];
 
   onDisplayDetails() {
     this.displayDetails = !this.displayDetails;
-    this.counter += 1;
-    this.arrButtonClickedCounter.push(this.counter);
+    this.arrButtonClickedCounter.push(new Date());
   }
 
 }

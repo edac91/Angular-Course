@@ -13,10 +13,10 @@
       <p *ngIf="displayDetails">Secret Password = tuna</p>
       <ul>
         <li
-          *ngFor="let index of arrButtonClickedCounter"
-          [ngStyle]="{backgroundColor: index >= 5 ? 'blue' : 'inherit'}"
-          [ngClass]="{clickedCounter: index >= 5}">
-          {{ index }}
+          *ngFor="let arrItem of arrButtonClickedCounter; let i = index"
+          [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'inherit'}"
+          [ngClass]="{clickedCounter: i >= 4}">
+          {{ arrItem }}
         </li>
       </ul>
     </div>
